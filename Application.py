@@ -1,7 +1,7 @@
 import streamlit as st
 import cv2
 
-from Utils.FaceUtils import detect_face_mesh, detect_haar_face
+from Utils.FaceUtils import detect_face_mesh, detect_haar_face, predict_emotion_cnn, predict_emotion_rf
 from Utils.HandUtils import hand_detection_classification_rf, hand_detection_classification_cnn
 
 
@@ -39,12 +39,16 @@ while run:
         break
     
     
-    #APP: implementing a huge number of models
+    #APP: implementing a huge number of models(not so huge maybe lol...)
     if selected_models['CNN Emotion Classifier (FRE)']:
-        detect_haar_face(frame)
+        faces = detect_haar_face(frame)
+        if len(faces) > 0: 
+            predict_emotion_cnn(frame, faces)
         
     if selected_models['RF Emotion Classifier (Custom)']:
-        detect_face_mesh(frame)
+        landmarks = detect_face_mesh(frame)
+        if len(landmarks) ==1404:
+            predict_emotion_rf(frame, landmarks)
     
     if selected_models['CNN Hand Gesture Classifier (ASL)']:
         hand_detection_classification_cnn(frame)
