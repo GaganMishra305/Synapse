@@ -105,7 +105,7 @@ def hand_detection_classification_cnn(frame, draw=True):
         if len(data_aux) == 42: 
             X = np.array(data_aux)
             X = X.reshape((1,42))
-            prediction = gesture_detector_cnn.predict(X, verbose=0)
+            prediction = gesture_detector_cnn.predict(X, verbose=2)
             predicted_character = np.argmax(prediction, axis=1)[0]
             
             asl_labels = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
