@@ -16,8 +16,6 @@ model_options = [
     "RF Emotion Classifier (Custom)",
     "CNN Hand Gesture Classifier (ASL)",
     "RF Gesture Classifier (Custom)",
-    "Image Stylizer",
-    "Caption generator",
 ]
 st.sidebar.title("Model Selection")
 selected_models = {name: st.sidebar.checkbox(name) for name in model_options}
@@ -57,7 +55,7 @@ while run:
         hand_detection_classification_rf(frame)
         
 
-    
+
     FRAME_WINDOW.image(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB), caption="Model output", width=1000)
     
 camera.release()
