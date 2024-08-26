@@ -56,11 +56,7 @@ while run:
     if selected_models['RF Gesture Classifier (Custom)']:
         hand_detection_classification_rf(frame)
         
-    if selected_models['Image Stylizer']:
-        ...
-    
-    if selected_models['Caption generator']:
-        ...
+
     
     FRAME_WINDOW.image(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB), caption="Model output", width=1000)
     
