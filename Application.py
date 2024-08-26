@@ -7,7 +7,7 @@ from Utils.HandUtils import hand_detection_classification_rf, hand_detection_cla
 
 #APP: Basic app settings
 st.set_page_config(layout="wide")
-st.title("Human Machine Interaction Organizer")
+st.title("Synapse")
 st.write("Select a model from the sidebar to switch models.")
 
 #APP: Models selection sidebar
