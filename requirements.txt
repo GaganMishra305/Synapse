@@ -1,9 +1,19 @@
-keras==2.10.0
-mediapipe==0.10.7
-numpy==1.24.4
-opencv_contrib_python==4.8.1.78
-opencv_python==4.8.1.78
-pandas==2.0.3
-streamlit==1.37.1
-tensorflow==2.10.0
-tqdm==4.66.1
+# for ml features
+keras
+mediapipe
+numpy
+tensorflow
+pandas
+scikit-learn
+
+# for input feed(in streamlit)
+opencv_contrib_python
+opencv_python
+
+
+# for generating the poc
+streamlit
+tqdm
+
+# for notebooks
+ipykernel
