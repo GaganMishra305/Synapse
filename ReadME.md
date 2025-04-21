@@ -92,3 +92,11 @@ For using this project you don't have to re-train all the models as they are alr
 
 ## 5. Future Feature Additions
 Currently this project is very minimal with only visual input and ```non-context based``` human interaction. I want to add many more features to it and make ```Synapse``` a multi-modal human-computer interaction system where the user could interact with the machine not only through the visual data but also through the audio and text data.
+
+
+## upcoming features : 
+1. Chatbot that can take visual and auditory input
+2. Cool/responsive ui
+3. Multiple specialization agents( therapist, financial, homework helper etc )
+4. Deployment and CICD
+5. Grapahana and langsmith
